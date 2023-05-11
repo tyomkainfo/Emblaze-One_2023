@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'Satoshi Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Regular'), url('../fonts/Satoshi-Regular.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Italic'), url('../fonts/Satoshi-Italic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Light'), url('../fonts/Satoshi-Light.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Light Italic'), url('../fonts/Satoshi-LightItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Medium'), url('../fonts/Satoshi-Medium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Medium Italic'), url('../fonts/Satoshi-MediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Bold'), url('../fonts/Satoshi-Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Bold Italic'), url('../fonts/Satoshi-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Black'), url('../fonts/Satoshi-Black.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Satoshi Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Satoshi Black Italic'), url('../fonts/Satoshi-BlackItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+  url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+  url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+  url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+  url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+
+body {
+  background-color: #F2F2EC;
+  @include max-screen(1000px) {
+    background-color: white;
+  }
+}
+
+.decor {
+  background-image: url("../images/Vector.png");
+  background-position: right 59px top 69px;
+  background-repeat: no-repeat;
+  padding-top: 110px;
+  max-width: 1440px;
+  margin: auto;
+  @include max-screen(1388px) {
+    background-position: right 0px top 69px;
+  }
+  @include max-screen(1000px) {
+    background-image: none;
+    padding-top: 0;
+  }
+}
+
+header {
+  .navbar{
+    padding-top: 0;
+  }
+  .navbar-nav{
+    @include max-screen(1000px) {
+      flex-direction:row;
+      background-color: black;
+      width: 100%;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+  }
+  .nav-item {
+    margin-left: 50px;
+    @include max-screen(1000px) {
+      margin-left: 0;
+    }
+    .nav-link {
+      padding: 0 !important;
+      margin: 0 !important;
+      font-family: 'Satoshi Bold';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: #484646;
+      @include max-screen(1000px) {
+        color: #FFFEFE;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+  .container {
+    @include max-screen(1000px) {
+     flex-direction: column-reverse;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .navbar-brand{
+    @include max-screen(1000px) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.main_section{
+  padding-top: 134px;
+  padding-bottom: 224px;
+  @include max-screen(1000px) {
+    padding-top: 115px;
+    padding-bottom: 186px;
+  }
+  h1{
+    font-family: 'ClashDisplay-Medium';
+    font-weight: 500;
+    font-size: 104px;
+    line-height: 96px;
+    text-align: center;
+    color: black;
+    span{
+      color: #FF0000;
+    }
+    @include max-screen(1000px) {
+      padding-top: 9px;
+      font-size: 60px;
+      line-height: 90%;
+    }
+  }
+}
+.about{
+  padding-bottom: 160px;
+  @include max-screen(1000px) {
+    padding-bottom: 80px;
+  }
+  h4{
+    padding-top: 20px;
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 90%;
+    /* or 16px */
+    letter-spacing: 0.02em;
+    /* emblaze black */
+    color: #050505;
+    margin-bottom: 20px;
+  }
+  h2{
+    font-family: 'ClashDisplay-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 63px;
+    letter-spacing: 0.02em;
+    color: #050505;
+    span{
+      color: rgba(255, 0, 0, 1);
+    }
+    @include max-screen(1000px) {
+      font-size: 60px;
+      line-height: 96%;
+      margin-bottom: 20px;
+    }
+  }
+  p{
+    font-family: 'ClashDisplay-Medium';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+    letter-spacing: 0.02em;
+    color: #050505;
+    margin-bottom: 30px;
+  }
+  a{
+    display: inline-block;
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 25px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    background-color: #FF0000;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+}
+@media (min-width: 1400px){
+    .container{
+      max-width: 1240px;
+    }
+}
+.slider{
+  margin-bottom: 130px;
+  @include max-screen(1000px) {
+    padding-left: 10px;
+    margin-bottom: 100px;
+  }
+  article{
+    text-align: center;
+    h4{
+      padding-top: 10px;
+      font-family: 'Satoshi Bold';
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      color: #050505;
+      margin-bottom: 10px;
+    }
+    p{
+      font-family: 'Satoshi Medium';
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #636363;
+    }
+  }
+}

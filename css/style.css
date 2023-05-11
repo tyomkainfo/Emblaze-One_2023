@@ -1,0 +1,225 @@
+@font-face {
+  font-family: 'Satoshi Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Regular"), url("../fonts/Satoshi-Regular.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Italic"), url("../fonts/Satoshi-Italic.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Light"), url("../fonts/Satoshi-Light.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Light Italic"), url("../fonts/Satoshi-LightItalic.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Medium"), url("../fonts/Satoshi-Medium.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Medium Italic"), url("../fonts/Satoshi-MediumItalic.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Bold"), url("../fonts/Satoshi-Bold.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Bold Italic"), url("../fonts/Satoshi-BoldItalic.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Black"), url("../fonts/Satoshi-Black.woff") format("woff"); }
+@font-face {
+  font-family: 'Satoshi Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Satoshi Black Italic"), url("../fonts/Satoshi-BlackItalic.woff") format("woff"); }
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url("../fonts/ClashDisplay-Regular.woff2") format("woff2"), url("../fonts/ClashDisplay-Regular.woff") format("woff"), url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal; }
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url("../fonts/ClashDisplay-Medium.woff2") format("woff2"), url("../fonts/ClashDisplay-Medium.woff") format("woff"), url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal; }
+body {
+  background-color: #F2F2EC; }
+  @media screen and (max-width: 1000px) {
+    body {
+      background-color: white; } }
+
+.decor {
+  background-image: url("../images/Vector.png");
+  background-position: right 59px top 69px;
+  background-repeat: no-repeat;
+  padding-top: 110px;
+  max-width: 1440px;
+  margin: auto; }
+  @media screen and (max-width: 1388px) {
+    .decor {
+      background-position: right 0px top 69px; } }
+  @media screen and (max-width: 1000px) {
+    .decor {
+      background-image: none;
+      padding-top: 0; } }
+
+header .navbar {
+  padding-top: 0; }
+@media screen and (max-width: 1000px) {
+  header .navbar-nav {
+    flex-direction: row;
+    background-color: black;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20px; } }
+header .nav-item {
+  margin-left: 50px; }
+@media screen and (max-width: 1000px) {
+  header .nav-item {
+    margin-left: 0; } }
+  header .nav-item .nav-link {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: 'Satoshi Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    color: #484646; }
+@media screen and (max-width: 1000px) {
+  header .nav-item .nav-link {
+    color: #FFFEFE;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.05em; } }
+@media screen and (max-width: 1000px) {
+  header .container {
+    flex-direction: column-reverse;
+    padding-left: 0;
+    padding-right: 0; } }
+@media screen and (max-width: 1000px) {
+  header .navbar-brand {
+    margin-top: 30px; } }
+
+.main_section {
+  padding-top: 134px;
+  padding-bottom: 224px; }
+  @media screen and (max-width: 1000px) {
+    .main_section {
+      padding-top: 115px;
+      padding-bottom: 186px; } }
+  .main_section h1 {
+    font-family: 'ClashDisplay-Medium';
+    font-weight: 500;
+    font-size: 104px;
+    line-height: 96px;
+    text-align: center;
+    color: black; }
+    .main_section h1 span {
+      color: #FF0000; }
+  @media screen and (max-width: 1000px) {
+    .main_section h1 {
+      padding-top: 9px;
+      font-size: 60px;
+      line-height: 90%; } }
+
+.about {
+  padding-bottom: 160px; }
+  @media screen and (max-width: 1000px) {
+    .about {
+      padding-bottom: 80px; } }
+  .about h4 {
+    padding-top: 20px;
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 90%;
+    /* or 16px */
+    letter-spacing: 0.02em;
+    /* emblaze black */
+    color: #050505;
+    margin-bottom: 20px; }
+  .about h2 {
+    font-family: 'ClashDisplay-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 63px;
+    letter-spacing: 0.02em;
+    color: #050505; }
+    .about h2 span {
+      color: red; }
+  @media screen and (max-width: 1000px) {
+    .about h2 {
+      font-size: 60px;
+      line-height: 96%;
+      margin-bottom: 20px; } }
+  .about p {
+    font-family: 'ClashDisplay-Medium';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+    letter-spacing: 0.02em;
+    color: #050505;
+    margin-bottom: 30px; }
+  .about a {
+    display: inline-block;
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 25px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    background-color: #FF0000;
+    border-radius: 6px;
+    text-decoration: none; }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1240px; } }
+.slider {
+  margin-bottom: 130px; }
+  @media screen and (max-width: 1000px) {
+    .slider {
+      padding-left: 10px;
+      margin-bottom: 100px; } }
+  .slider article {
+    text-align: center; }
+    .slider article h4 {
+      padding-top: 10px;
+      font-family: 'Satoshi Bold';
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      color: #050505;
+      margin-bottom: 10px; }
+    .slider article p {
+      font-family: 'Satoshi Medium';
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #636363; }
