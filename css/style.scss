@@ -98,6 +98,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'ClashDisplay-Semibold';
+  src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+  url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+  url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
 @mixin max-screen($res) {
   @media screen and (max-width: $res) {
     @content;
@@ -129,23 +139,26 @@ body {
 }
 
 header {
-  .navbar{
+  .navbar {
     padding-top: 0;
   }
-  .navbar-nav{
+
+  .navbar-nav {
     @include max-screen(1000px) {
-      flex-direction:row;
+      flex-direction: row;
       background-color: black;
       width: 100%;
       justify-content: space-between;
       padding: 10px 20px;
     }
   }
+
   .nav-item {
     margin-left: 50px;
     @include max-screen(1000px) {
       margin-left: 0;
     }
+
     .nav-link {
       padding: 0 !important;
       margin: 0 !important;
@@ -164,37 +177,42 @@ header {
       }
     }
   }
+
   .container {
     @include max-screen(1000px) {
-     flex-direction: column-reverse;
+      flex-direction: column-reverse;
       padding-left: 0;
       padding-right: 0;
     }
   }
-  .navbar-brand{
+
+  .navbar-brand {
     @include max-screen(1000px) {
       margin-top: 30px;
     }
   }
 }
 
-.main_section{
+.main_section {
   padding-top: 134px;
   padding-bottom: 224px;
   @include max-screen(1000px) {
     padding-top: 115px;
     padding-bottom: 186px;
   }
-  h1{
+
+  h1 {
     font-family: 'ClashDisplay-Medium';
     font-weight: 500;
     font-size: 104px;
     line-height: 96px;
     text-align: center;
     color: black;
-    span{
+
+    span {
       color: #FF0000;
     }
+
     @include max-screen(1000px) {
       padding-top: 9px;
       font-size: 60px;
@@ -202,12 +220,14 @@ header {
     }
   }
 }
-.about{
+
+.about {
   padding-bottom: 160px;
   @include max-screen(1000px) {
     padding-bottom: 80px;
   }
-  h4{
+
+  h4 {
     padding-top: 20px;
     font-family: 'Satoshi Bold';
     font-weight: 700;
@@ -219,7 +239,8 @@ header {
     color: #050505;
     margin-bottom: 20px;
   }
-  h2{
+
+  h2 {
     font-family: 'ClashDisplay-Regular';
     font-style: normal;
     font-weight: 400;
@@ -227,16 +248,19 @@ header {
     line-height: 63px;
     letter-spacing: 0.02em;
     color: #050505;
-    span{
+
+    span {
       color: rgba(255, 0, 0, 1);
     }
+
     @include max-screen(1000px) {
       font-size: 60px;
       line-height: 96%;
       margin-bottom: 20px;
     }
   }
-  p{
+
+  p {
     font-family: 'ClashDisplay-Medium';
     font-weight: 500;
     font-size: 16px;
@@ -246,7 +270,8 @@ header {
     color: #050505;
     margin-bottom: 30px;
   }
-  a{
+
+  a {
     display: inline-block;
     font-family: 'Satoshi Bold';
     font-weight: 700;
@@ -261,20 +286,24 @@ header {
     text-decoration: none;
   }
 }
-@media (min-width: 1400px){
-    .container{
-      max-width: 1240px;
-    }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1240px;
+  }
 }
-.slider{
+
+.slider {
   margin-bottom: 130px;
   @include max-screen(1000px) {
     padding-left: 10px;
     margin-bottom: 100px;
   }
-  article{
+
+  article {
     text-align: center;
-    h4{
+
+    h4 {
       padding-top: 10px;
       font-family: 'Satoshi Bold';
       font-weight: 700;
@@ -283,7 +312,8 @@ header {
       color: #050505;
       margin-bottom: 10px;
     }
-    p{
+
+    p {
       font-family: 'Satoshi Medium';
       font-weight: 500;
       font-size: 12px;
@@ -292,5 +322,353 @@ header {
       text-transform: uppercase;
       color: #636363;
     }
+  }
+}
+
+.operators {
+  padding-bottom: 150px;
+  @include max-screen(1000px) {
+    padding-bottom: 0;
+  }
+
+  h4 {
+    font-family: 'ClashDisplay-Semibold';
+    font-weight: 600;
+    font-size: 66px;
+    line-height: 96%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FF0000;
+    margin-bottom: 10px;
+    @include max-screen(1000px) {
+      font-size: 60px;
+      line-height: 96%;
+    }
+  }
+
+  p {
+    font-family: 'Satoshi Medium';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 96%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #050505;
+    margin-bottom: 50px;
+    @include max-screen(1000px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .ttext {
+    text-align: center;
+
+    p {
+      font-family: 'Satoshi Regular';
+      font-weight: 400;
+      font-size: 24px;
+      text-transform: none;
+      line-height: 120%;
+      leading-trim: both;
+      text-edge: cap;
+      text-align: center;
+      color: #050505;
+      margin-bottom: 70px;
+
+      span {
+        font-family: 'Satoshi Bold';
+        font-weight: 700;
+      }
+
+      @include max-screen(1000px) {
+        font-size: 32px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  article {
+    background: #FFFEFE;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.02);
+    border-radius: 12px;
+    padding: 50px;
+    box-sizing: border-box;
+    min-height: 450px;
+    margin-bottom: 40px;
+    @include max-screen(1000px) {
+      padding: 30px 10px;
+      margin-bottom: 20px;
+      min-height: auto;
+    }
+
+    h3 {
+      font-family: 'Satoshi Bold';
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 126%;
+      leading-trim: both;
+      text-edge: cap;
+      letter-spacing: 0.02em;
+      color: #050505;
+      padding-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-family: 'Satoshi Medium';
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      leading-trim: both;
+      text-edge: cap;
+      letter-spacing: 0.02em;
+      color: #636363;
+      margin-bottom: 0;
+      text-transform: none;
+      text-align: left;
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    /* or 25px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    background-color: #FF0000;
+    border-radius: 6px;
+    text-decoration: none;
+    @include max-screen(1000px) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.brands {
+  padding-bottom: 100px;
+  @include max-screen(1000px) {
+    background-color: #F2F2EC;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  h4 {
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 90%;
+    letter-spacing: 0.02em;
+    color: #050505;
+    margin-bottom: 60px;
+  }
+
+  h3 {
+    font-family: 'Satoshi Medium';
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 126%;
+    color: #696767;
+    margin-bottom: 60px;
+
+    span {
+      color: black;
+    }
+  }
+
+  .icons {
+    background-color: white;
+    @include max-screen(767px) {
+      width: 185px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.design {
+  background-color: white;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  @include max-screen(767px) {
+    padding-bottom: 80px;
+  }
+  h2{
+    font-family: 'ClashDisplay-Medium';
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #050505;
+    @include max-screen(1000px){
+      font-size: 30px;
+      line-height: 100%;
+    }
+    span{
+      color: #FF0000;
+    }
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 30px;
+    font-family: 'Satoshi Medium';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #050505;
+  }
+  article{
+    background: #F2F2EC;
+    border-radius: 20px;
+    padding: 70px 0;
+    text-align: center;
+    @include max-screen(1000px){
+      padding: 30px;
+    }
+    p{
+      padding-top: 30px;
+      font-family: 'Satoshi Medium';
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #050505;
+      max-width: 920px;
+      margin: auto;
+      @include max-screen(1000px){
+        font-size: 24px;
+        line-height: 150%;
+      }
+    }
+    h6{
+      font-family: 'Satoshi Medium';
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #050505;
+      padding-top: 30px;
+    }
+  }
+}
+.services{
+  background-color: #000000;
+  padding: 100px 0;
+  @include max-screen(1000px){
+    padding: 40px 15px 50px;
+  }
+  h4 {
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 90%;
+    letter-spacing: 0.02em;
+    color: #FFFEFE;
+    margin-bottom: 60px;
+    @include max-screen(1000px){
+      margin-bottom: 50px;
+    }
+  }
+
+  h3 {
+    font-family: 'Satoshi Medium';
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 126%;
+    color: #9E9E9E;
+    margin-bottom: 0px;
+    @include max-screen(1000px){
+      margin-bottom: 0px;
+      font-size: 32px;
+      line-height: 126%;
+    }
+    span {
+      color: #FFFEFE;
+    }
+  }
+  hr{
+    border-top: 1px solid #4D4D4D;
+   background-color: transparent;
+    margin-bottom: 50px;
+    opacity: 1;
+    margin-top: 60px;
+    @include max-screen(1000px){
+      margin-top: 50px;
+    }
+  }
+  h5{
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+  h4{
+    font-family: 'Satoshi Bold';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #FFFEFE;
+    margin-bottom: 40px;
+    @include max-screen(1000px){
+      margin-bottom: 20px;
+    }
+  }
+  ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    @include max-screen(1000px){
+      margin-bottom: 20px;
+    }
+    &.m-40{
+      margin-bottom: 40px;
+      @include max-screen(1000px){
+        margin-bottom: 20px;
+      }
+    }
+    li{
+      font-family: 'Satoshi Bold';
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 180%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #9E9E9E;
+    }
+  }
+}
+.galery{
+  background-color: #FFFEFE;
+  padding: 80px 0;
+  .container_my{
+    //max-width: 1440px;
+    margin: auto;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+footer{
+  background-color: #000000;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  @include max-screen(1000px){
+    padding-top: 120px;
+    padding-bottom: 30px;
   }
 }
